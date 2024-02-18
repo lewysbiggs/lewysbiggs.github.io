@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px; background-color: #f8f8f8;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.w3-sidebar {
+  background-color: navy;
+  color: lightblue;
+}
+.w3-sidebar a {
+  color: lightblue !important;
+}
+.w3-sidebar a:hover {
+  background-color: lightblue;
+  color: navy !important;
+}
+.w3-sidebar .w3-bar-block .w3-button:hover {
+  background-color: lightblue;
+  color: navy !important;
+}
+.w3-top .w3-bar-item {
+  background-color: navy !important;
+  color: lightblue !important;
+}
+.w3-top .w3-bar-item:hover {
+  background-color: lightblue !important;
+  color: navy !important;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">X</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Swansea Medical School<br>Clinical Placement Newsletter</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-lightblue">Home</a> 
+    <a href="#Current Edition" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-lightblue">Current Edition</a> 
+    <a href="#Submissions" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-lightblue">Submissions</a> 
+    <a href="#Archive" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-lightblue">Archive</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-lightblue">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Swansea Medical School Clinical Placement Newsletter</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="Current Edition">
+    <h1 class="w3-xxxlarge w3-text-lightblue"><b>Current Edition.</b></h1>
+    <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+
+ <!-- Download link for the PDF -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <a href="C:\Users\lewys\OneDrive\Desktop\GEM\Newsletter\edition5.pdf" download="Current_Edition.pdf" class="w3-button w3-light-blue">Download Current Edition</a>
+  </div>
+    
+    <!-- Embedded PDF window -->
+    <div style="width:100%; height:90vh;">
+      <embed src="C:\Users\lewys\OneDrive\Desktop\GEM\Newsletter\edition5.pdf" type="application/pdf" width="100%" height="100%">
+    </div>
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+    </div>
+
+    <div class="w3-half">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+ <!-- Archive -->
+<div class="w3-container" id="Archive" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-lightblue"><b>Archive.</b></h1>
+  <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <a href="C:\Users\lewys\OneDrive\Desktop\GEM\Newsletter\edition4.pdf" download="Edition_4.pdf"><img src="/w3images/team2.jpg" alt="Edition 4" style="width:100%"></a>
+        <div class="w3-container">
+          <h3>Edition 4</h3>
+          <p class="w3-opacity">Download PDF</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <a href="C:\Users\lewys\OneDrive\Desktop\GEM\Newsletter\edition3.pdf" download="Edition_3.pdf"><img src="/w3images/team1.jpg" alt="Edition 3" style="width:100%"></a>
+        <div class="w3-container">
+          <h3>Edition 3</h3>
+          <p class="w3-opacity">Download PDF</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <a href="C:\Users\lewys\OneDrive\Desktop\GEM\Newsletter\edition2.pdf" download="Edition_2.pdf"><img src="/w3images/team3.jpg" alt="Edition 2" style="width:100%"></a>
+        <div class="w3-container">
+          <h3>Edition 2</h3>
+          <p class="w3-opacity">Download PDF</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Submissions -->
+<div class="w3-container" id="Submissions" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-lightblue"><b>Submissions.</b></h1>
+  <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+  <p>Submit your content below:</p>
+  <form action="https://formspree.io/f/xqkrqdda" method="post" enctype="multipart/form-data">
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <!-- Placeholder explanatory text -->
+        <p>File submission is currently disabled. Please fill out the other fields to submit your content.</p>
+      </div>
+      <div class="w3-half">
+        <div class="w3-section">
+          <label for="name">Name:</label>
+          <input class="w3-input w3-border" type="text" id="name" name="name" required>
+        </div>
+        <div class="w3-section">
+          <input class="w3-check" type="checkbox" id="anonymous" name="anonymous">
+          <label for="anonymous">Keep me anonymous</label>
+        </div>
+        <div class="w3-section">
+          <label for="email">Email:</label>
+          <input class="w3-input w3-border" type="email" id="email" name="email" required>
+        </div>
+        <div class="w3-section">
+          <label for="message">Message (max. 600 words):</label>
+          <textarea class="w3-input w3-border" id="message" name="message" maxlength="600" rows="8" required></textarea>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-padding-large w3-light-blue w3-margin-bottom">Submit</button>
+  </form>
+</div>
+
+ <!-- Contact -->
+<div class="w3-container" id="contact" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-lightblue"><b>Contact.</b></h1>
+  <hr style="width:50px;border:5px solid lightblue" class="w3-round">
+  <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+  <form action="https://formspree.io/f/xqkrqdda" method="post">
+    <div class="w3-section">
+      <label>Name</label>
+      <input class="w3-input w3-border" type="text" name="Name" required>
+    </div>
+    <div class="w3-section">
+      <label>Email</label>
+      <input class="w3-input w3-border" type="text" name="Email" required>
+    </div>
+    <div class="w3-section">
+      <label>Message</label>
+      <input class="w3-input w3-border" type="text" name="Message" required>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-padding-large w3-light-blue w3-margin-bottom">Send Message</button>
+  </form>  
+</div>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
